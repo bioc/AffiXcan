@@ -330,9 +330,9 @@ computePca <- function(data, varExplained=80, scale=TRUE) {
                 select=colnames(eigenvectors)[1:nWantedPcs])
 
             for(pwm in notScalablePwm) {
-                newLine <- matrix(rep(0, nWantedPcs), ncol=1)
+                newLine <- matrix(rep(0, nWantedPcs), nrow=1)
                 wantedEigenvectors <- rbind(wantedEigenvectors, newLine)
-                rownames(wantedEigenvectors)[[nrow(wantedEigenvectors)]] <- pwm
+                rownames(wantedEigenvectors)[nrow(wantedEigenvectors)] <- pwm
             }
 
             wantedEigenvectors <- as.data.frame(wantedEigenvectors)
