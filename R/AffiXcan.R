@@ -84,6 +84,7 @@
 #'  training data
 #' }
 #' @import MultiAssayExperiment SummarizedExperiment BiocParallel crayon
+#' @importFrom stats anova cor cor.test lm p.adjust pf prcomp setNames var
 #' @export
 #'
 #' @examples
